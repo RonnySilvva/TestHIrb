@@ -9,33 +9,22 @@ import org.hibernate.cfg.Configuration;
 
 public class MetodosTeste {
 	
-
-//metodo com erro
-	/*
-	public void listar(){
+	public void adicionar(){
 		
-		List<Pessoa> list=null;
+		Pessoa pessoa = new Pessoa();
+		pessoa.setId(6);
+		pessoa.setNome("Teste 6");
 		
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		session.beginTransaction();
 		
-		try{
-			
-			session.beginTransaction();
-			list = session.createQuery("select * from pessoa").list();
-			session.getTransaction().commit();
-			
-			for(Pessoa pes:list){
-				System.out.println("Nome: " + pes.getNome());
-			}
-	}catch(Exception e){
-		System.out.println(e);
-	}finally{
+		session.save(pessoa);
+		
+		session.getTransaction().commit();
 		session.close();
-		factory.close();
-	}}
-	*/
+		
+	}
 	
 	public void listarForm(){
 		try{
