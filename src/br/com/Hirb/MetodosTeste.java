@@ -64,4 +64,37 @@ public class MetodosTeste {
 				}
 
 			}
+	
+	public void alterar(){
+		Pessoa pessoa = new Pessoa();
+		pessoa.setId(2);
+		pessoa.setNome("Teste 123");
+		
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		session.beginTransaction();
+		
+		session.update(pessoa);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+	}
+	
+	public void remover(){
+		Pessoa pessoa = new Pessoa();
+		pessoa.setId(2);
+		pessoa.setNome("Teste 123");
+		
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		session.beginTransaction();
+		
+		session.delete(pessoa);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+	}
+	
 	}

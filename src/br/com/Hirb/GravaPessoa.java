@@ -20,6 +20,8 @@ public class GravaPessoa {
 			
 			session.getTransaction().commit();
 			session.close();
+			
+			
 		}
 		
 	
