@@ -9,8 +9,8 @@ public class GravaPessoa {
 		public static void main(String[] args) {
 			
 			Pessoa pessoa = new Pessoa();
-			pessoa.setId(1);
-			pessoa.setNome("Teste 1");
+			pessoa.setId(2);
+			pessoa.setNome("Teste 2");
 			
 			SessionFactory factory = new Configuration().configure().buildSessionFactory();
 			Session session = factory.openSession();
